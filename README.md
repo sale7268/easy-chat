@@ -37,15 +37,31 @@ const App = () => {
 
 ## Components
 
-<ChatWindow />
-- messages: Array of messages.
-- onSend: Function to handle sending messages.
-- user: Current user object.
-<ChatBubble />
-- message: Message object.
-- isCurrentUser: Boolean indicating if the message is from the current user.
-<ChatInput />
-- onSend: Function to handle sending a message.
+## Components and Props
+
+| **Component** | **Prop**        | **Description**                                             |
+| ------------- | --------------- | ----------------------------------------------------------- |
+| `ChatWindow`  | `messages`      | Array of messages.                                          |
+| `ChatWindow`  | `onSend`        | Function to handle sending messages.                        |
+| `ChatWindow`  | `user`          | Current user object.                                        |
+| `ChatBubble`  | `message`       | Message object.                                             |
+| `ChatBubble`  | `isCurrentUser` | Boolean indicating if the message is from the current user. |
+| `ChatInput`   | `onSend`        | Function to handle sending a message.                       |
+
+## All Possible Props
+
+| **Prop**                    | **Type**                                                               | **Description**                                                         |
+| --------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `messages`                  | `Message[]`                                                            | Array of messages.                                                      |
+| `onSend`                    | `(messages: Message[]) => void`                                        | Function to handle sending messages.                                    |
+| `user`                      | `ChatUser`                                                             | Current user object.                                                    |
+| `keyboardShouldPersistTaps` | `"always" \| "never" \| "handled"`                                     | Determines if the keyboard should persist taps. Default is `"handled"`. |
+| `minInputToolbarHeight`     | `number`                                                               | Minimum height for the input toolbar. Default is `44`.                  |
+| `listViewProps`             | `FlatListProps<Message>`                                               | Additional props to pass to the `FlatList` component.                   |
+| `renderBubble`              | `(props: { message: Message; isCurrentUser: boolean }) => JSX.Element` | Custom render function for the message bubble.                          |
+| `renderInputToolbar`        | `(props: { onSend: (text: string) => void }) => JSX.Element`           | Custom render function for the input toolbar.                           |
+| `chatTitle`                 | `string`                                                               | Title of the chat window.                                               |
+| `showTimestamp`             | `boolean`                                                              | Whether to show the timestamp in the message bubble. Default is `true`. |
 
 ## Hooks
 
