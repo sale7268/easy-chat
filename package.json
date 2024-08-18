@@ -1,0 +1,44 @@
+{
+  "name": "easy-chat",
+  "version": "1.0.0",
+  "description": "A chat UI library for Expo projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/easy-chat.git"
+  },
+  "keywords": [
+    "chat",
+    "react-native",
+    "expo",
+    "ui",
+    "typescript"
+  ],
+  "dependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0",
+    "expo": ">=44.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.64.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": false
+}
